@@ -1,4 +1,4 @@
-#Platforms
+#Platforms#
 This is an animation I made based on a screenprint I made. I used the Snap.svg library (available at http://snapsvg.io/) to manipulate shapes that were originally screenprinted onto paper.
 
 Click the shapes to animate. If you click them twice they do some cool glitching, which I would like to explore further.
