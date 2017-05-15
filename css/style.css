@@ -2,13 +2,71 @@ body {
 	height: 100vh;
 	width: 100vw;
 	margin: 0;
+	font-family: "Inconsolata", monospace;
+	overflow-x: hidden;
 }
 
+#body-wrapper {
+	overflow-x: hidden;
+}
+
+#svg {
+	overflow-x: hidden;
+}
+#body-wrapper {
+	overflow-x: hidden;
+}
 #wrapper {
 	background-color: white;
 	height: 100vh;
 	width: 100vw;
 }
 
-#svg {
+#about-link {
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	font-size: 1.5em;
+	opacity: .5;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover, #about-link:hover {
+	color: #479BFF;
+}
+
+#about {
+	display: none;
+	text-align: center;
+	background-color: white;
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid black;
+	font-family: 'Noto-Sans', sans-serif;
+	padding: 10px;
+	width: 80vw;
+}
+
+.closebtn {
+	float: left;
+	position: relative;
+	font-size: 2em;
+	margin-top: 15px;
+	margin-left: 15px;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+	display: fixed;
+}
+
+.closebtn:hover {
+	color: #479BFF;
 }

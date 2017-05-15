@@ -6,17 +6,28 @@ $(document).ready(function() {
 	var WIDTH = $(window).width();
 	var HEIGHT = $(window).height();
 
-
-	// set the counter for number of transforms applied -->
-	// for some reason t
+	// initalize aboutVisible variable - as it sounds
+	var aboutVisible = false;
+	var aboutLink = $('#about-link')
+	var closeBtn = $('.closebtn');
 
 	// initialize elements and platforms
-	var circle = s.circle(multipleFiveX(.25), multipleFiveY(.16),25);
-	var rect = s.rect(multipleFiveX(.5),multipleFiveY(.33),150,60);
-	var square = s.rect(multipleFiveX(.75),multipleFiveX(.16),40,40);
-	var triangle = s.polygon(500,200,500,100,600,150);
 
+	if ($(window).width() <= 650) {
+		var circle = s.circle(multipleFiveX(.90), multipleFiveY(.15),multipleFiveX(.046));
+		var rect = s.rect(multipleFiveX(.80),multipleFiveY(.33),multipleFiveX(.15),multipleFiveX(.10));
+		var square = s.rect(multipleFiveX(.75),multipleFiveY(.16),multipleFiveX(.08),multipleFiveX(.08));
+		var triangle = s.polygon(multipleFiveX(.56),multipleFiveY(.22),multipleFiveX(.56),multipleFiveY(.11),multipleFiveX(.68),multipleFiveY(.12));
+	}
 
+	else {
+		var circle = s.circle(multipleFiveX(.90), multipleFiveY(.15),multipleFiveX(.026));
+		var rect = s.rect(multipleFiveX(.80),multipleFiveY(.33),multipleFiveX(.07),multipleFiveY(.05));
+		var square = s.rect(multipleFiveX(.75),multipleFiveY(.16),multipleFiveX(.03),multipleFiveX(.03));
+		var triangle = s.polygon(multipleFiveX(.56),multipleFiveY(.22),multipleFiveX(.56),multipleFiveY(.11),multipleFiveX(.68),multipleFiveY(.12));
+	
+	}
+	
 	var leftPlatform = s.rect(multipleFiveX(.083), multipleFiveY(.25), multipleFiveX(.133), multipleFiveY(.59));
 	var rightPlatform = s.rect(multipleFiveX(.46), multipleFiveY(.7), multipleFiveX(.45), multipleFiveX(.083));
 
@@ -32,7 +43,7 @@ $(document).ready(function() {
 	var RIGHT_RIGHT = rightPlatform.node.getBoundingClientRect().right;
 
 	// set speed of animations --> 1000 = 1s
-	var SPEED = 1;
+	var SPEED = 10;
 
 
 
@@ -268,5 +279,31 @@ $(document).ready(function() {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
+
+
+	// toggle about display
+	function toggleAbout() {
+		var about = $('#about');
+	  	var svg = $('#svg');
+		
+	  	if (aboutVisible == false){
+	  	  svg.css('opacity', '.5');
+	  	  about.css('display', 'block');
+	  	}
+		
+	  	else {
+	  	  svg.css('opacity', '1');
+	  	  about.css('display', 'none');
+	  	}
+	  	aboutVisible = !aboutVisible;
+	}
+
+	aboutLink.click(function() {
+	  	toggleAbout();
+	});
+
+	closeBtn.click(function() {
+		toggleAbout();
+	});
 
 });

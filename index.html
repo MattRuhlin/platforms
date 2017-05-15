@@ -5,7 +5,11 @@
 <head>
 	<title>platforms</title>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Noto+Sans" rel="stylesheet">
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
@@ -14,51 +18,67 @@
 </head>
 
 <body>
-	<div id="wrapper">
-		<svg id="svg"
-		version="1.1" 
-		xmlns:svg="http://www.w3.org/2000/svg"
-		xmlns="http://www.w3.org/2000/svg"
-		x="0"
-		y="0"
-		width="100%"
-		height="100%"
-		preserveAspectRatio="none">
+	<div id="body-wrapper">
+
+		<p id="about-link">about</p>
+
+		<div id="about">
+			 <button class="closebtn" onclick="toggleActions()">&times;</button><br /><br /><br /><br />
+			<strong>Click the shapes to start them moving.</strong><br /><br />
+			<strong>If you resize the window you must refresh the page for the animation to be scaled</strong>
+			<br /><br /> If they are clicked while moving (if you can catch them), there's a cool glitching that happens and they slowly move offscreen.<br /><br />
+
+			 I made this with Javascript and the <a href="http://snapsvg.io/" target="_blank">Snap.svg</a> library. It is based on a screenprint I made, and I hope to emulate the experience/aesthetic of old puzzle platformer games.<br /><br />
+			Contribute on <strong><a href="https://github.com/MattRuhlin/platforms" target="_blank">GitHub</a></strong>
+			<br /><br />
+		</div>
+
+		<div id="wrapper">
+			<svg id="svg"
+			version="1.1" 
+			xmlns:svg="http://www.w3.org/2000/svg"
+			xmlns="http://www.w3.org/2000/svg"
+			x="0"
+			y="0"
+			width='1200px'
+			height='880px'
+			viewBox='0 0 1200 880'
+			preserveAspectRatio="none">
 
 
 		<!-- BACKGROUND IMAGES -->
-	<defs>
-  		<pattern id="left_platform" patternUnits="userSpaceOnUse" width="20" height="36">
-    		<image xlink:href="assets/platform.jpg" x="0" y="0" width="20" height="36" />
-  		</pattern>
+			<defs>
+  				<pattern id="left_platform" patternUnits="userSpaceOnUse" width="20" height="36">
+    				<image xlink:href="assets/platform.jpg" x="0" y="0" width="20" height="36" />
+  				</pattern>
 
-  		<pattern id="right_platform" patternUnits="userSpaceOnUse" width="11" height="19">
-    		<image xlink:href="assets/platform.jpg" x="0" y="0" width="11" height="19" />
-  		</pattern>
+  				<pattern id="right_platform" patternUnits="userSpaceOnUse" width="11" height="19">
+    				<image xlink:href="assets/platform.jpg" x="0" y="0" width="11" height="19" />
+  				</pattern>
 
-  		<pattern id="green_square" patternUnits="userSpaceOnUse" width="100%" height = "100%">
-  			<image xlink:href="assets/green_square.jpg" x = "0" y="0" width="100%" height="100%" />
-  		</pattern>
+  				<pattern id="green_square" patternUnits="userSpaceOnUse" width="100%" height = "100%">
+  					<image xlink:href="assets/green_square.jpg" x = "0" y="0" width="100%" height="100%" />
+  				</pattern>
 
-  		<pattern id="blue_rect" patternUnits="userSpaceOnUse" width="100%" height = "100%">
-  			<image xlink:href="assets/blue_rect.jpg" x = "0" y="0" width="100%" height="100%" />
-  		</pattern>
+  				<pattern id="blue_rect" patternUnits="userSpaceOnUse" width="100%" height = "100%">
+  					<image xlink:href="assets/blue_rect.jpg" x = "0" y="0" width="100%" height="100%" />
+  				</pattern>
 
-  		<pattern id="yellow_triangle" patternUnits="userSpaceOnUse" width="100%" height = "100%">
-  			<image xlink:href="assets/yellow_triangle.jpg" x = "0" y="0" width="100%" height="100%" />
-  		</pattern>
+  				<pattern id="yellow_triangle" patternUnits="userSpaceOnUse" width="100%" height = "100%">
+  					<image xlink:href="assets/yellow_triangle.jpg" x = "0" y="0" width="100%" height="100%" />
+  				</pattern>
 
-  		<pattern id="red_circle" patternUnits="userSpaceOnUse" width="100%" height = "100%">
-  			<image xlink:href="assets/red_circle.jpg" x = "0" y="0" width="100%" height="100%" />
-  		</pattern>
+  				<pattern id="red_circle" patternUnits="userSpaceOnUse" width="100%" height = "100%">
+  					<image xlink:href="assets/red_circle.jpg" x = "0" y="0" width="100%" height="100%" />
+  				</pattern>
 
-	</defs>
+			</defs>
 
-		</svg>
+			</svg>
 
 	</div>
 
-
+</div>
 </body>
 
 </html>
