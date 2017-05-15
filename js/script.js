@@ -50,7 +50,7 @@ $(document).ready(function() {
 	// set element attributes
 	circle.attr({
 		//fill: 'url(#red_circle)',
-		fill: 'red',
+		fill: '#FF4439',
 		opacity: '.7',
 		position: '',
 		class: 'moveable',
@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 	rect.attr({
 		//fill: 'url(#blue_rect)',
-		fill: 'blue',
+		fill: '#8998FF',
 		opacity: '.7',
 		position: '',
 		class: 'moveable',
@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 	square.attr({
 		//fill: 'url(#green_square)',
-		fill: 'green',
+		fill: '#347A49',
 		opacity: '.7',
 		position: '',
 		class: 'moveable',
@@ -77,7 +77,7 @@ $(document).ready(function() {
 
 	triangle.attr({
 		//fill: 'url(#yellow_triangle)',
-		fill: 'yellow',
+		fill: '#FFE973',
 		opacity: '.7',
 		position: '',
 		class: 'moveable',
