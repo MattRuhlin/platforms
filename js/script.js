@@ -14,7 +14,7 @@ $(document).ready(function() {
 	// initialize elements and platforms
 
 	if ($(window).width() <= 650) {
-		var circle = s.circle(multipleFiveX(.90), multipleFiveY(.15),multipleFiveX(.046));
+		var circle = s.circle(multipleFiveX(.90), multipleFiveY(.20),multipleFiveX(.046));
 		var rect = s.rect(multipleFiveX(.80),multipleFiveY(.33),multipleFiveX(.15),multipleFiveX(.10));
 		var square = s.rect(multipleFiveX(.75),multipleFiveY(.16),multipleFiveX(.08),multipleFiveX(.08));
 		var triangle = s.polygon(multipleFiveX(.56),multipleFiveY(.22),multipleFiveX(.56),multipleFiveY(.11),multipleFiveX(.68),multipleFiveY(.12));
